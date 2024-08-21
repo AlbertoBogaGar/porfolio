@@ -1,0 +1,31 @@
+---
+import { timerMessage } from "node_modules/astro/dist/core/logger/core"
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Actualmente...",
+    title: "Estudiante de DAW",
+    company: "",
+    description: 
+      "Estoy cursando el grado superior de Desarrollo de Aplicaciones Web, donde estoy adquiriendo conocimientos de programación y diseño web.",
+    link: "",
+  },
+  {
+    date: "Actualmente",
+    title: "Creando mis propios proyectos web",
+    company:"",
+    description:
+    "Actualmente me dedico a crear soluciones a personas con grandes proyectos o que quieren desarrollar su idea de negocio",
+  }
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
